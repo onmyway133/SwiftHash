@@ -46,5 +46,7 @@ class Tests: XCTestCase {
                    "8FFDEFBDEC956B595D257F0AAEEFD623")
     XCTAssertEqual(hex_md5("https://www.google.com/logos/doodles/2016/parents-day-in-korea-5757703554072576-hp2x.jpg"),
                    "0DFB10E8D2AE771B3B3ED4544139644E")
+    XCTAssertEqual(hex_md5("https://unsplash.it/600/300/?image=1"),
+                   "D59E956EBB1BE415970F04EC77F4C875")
   }
 }

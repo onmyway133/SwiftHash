@@ -67,7 +67,7 @@ func rstr2binl(input: [CUnsignedChar]) -> [Int32] {
     output[i >> 5] = (output[i >> 5] ?? 0) | value
   }
 
-  return output.map { $1 }
+  return dictionary2array(output)
 }
 
 /*
@@ -242,8 +242,19 @@ func binl_md5(input: [Int32], _ len: Int) -> [Int32] {
 }
 
 // MARK: - Helper
+
 func length(dictionary: [Int: Int32]) -> Int {
   return (dictionary.keys.maxElement() ?? 0) + 1
+}
+
+func dictionary2array(dictionary: [Int: Int32]) -> [Int32] {
+  var array = Array<Int32>(count: dictionary.keys.count, repeatedValue: 0)
+
+  for i in Array(dictionary.keys).sort() {
+    array[i] = dictionary[i] ?? 0
+  }
+
+  return array
 }
 
 func zeroFillRightShift(num: Int32, _ count: Int32) -> Int32 {

@@ -8,15 +8,19 @@ class Tests: XCTestCase {
 
     let hello = str2rstr_utf8("hello")
     let world = str2rstr_utf8("world")
+    let google = str2rstr_utf8("https://www.google.com")
 
     XCTAssertEqual(rstr2tr(hello), "hello")
     XCTAssertEqual(rstr2tr(world), "world")
+    XCTAssertEqual(rstr2tr(google), "https://www.google.com")
 
     XCTAssertEqual(rstr2binl(hello), [1819043176, 111])
     XCTAssertEqual(rstr2binl(world), [1819438967, 100])
+    XCTAssertEqual(rstr2binl(google), [1886680168, 791624307, 779581303, 1735356263, 1663985004, 28015])
 
     XCTAssertEqual(rstr2hex(hello), "68656C6C6F")
     XCTAssertEqual(rstr2hex(world), "776F726C64")
+    XCTAssertEqual(rstr2hex(google), "68747470733A2F2F7777772E676F6F676C652E636F6D")
 
     XCTAssertEqual(Int32(-991732713) << Int32(12), 901869568)
     XCTAssertEqual(Int32(991732713) << Int32(12), -901869568)
@@ -34,7 +38,13 @@ class Tests: XCTestCase {
   }
 
   func testMD5() {
-    XCTAssertEqual(hex_md5("hello"), "5D41402ABC4B2A76B9719D911017C592")
-    XCTAssertEqual(hex_md5("world"), "7D793037A0760186574B0282F2F435E7")
+    XCTAssertEqual(hex_md5("hello"),
+                   "5D41402ABC4B2A76B9719D911017C592")
+    XCTAssertEqual(hex_md5("world"),
+                   "7D793037A0760186574B0282F2F435E7")
+    XCTAssertEqual(hex_md5("https://www.google.com"),
+                   "8FFDEFBDEC956B595D257F0AAEEFD623")
+    XCTAssertEqual(hex_md5("https://www.google.com/logos/doodles/2016/parents-day-in-korea-5757703554072576-hp2x.jpg"),
+                   "0DFB10E8D2AE771B3B3ED4544139644E")
   }
 }

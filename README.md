@@ -1,4 +1,5 @@
 # SwiftHash
+Hash in Swift
 
 [![CI Status](http://img.shields.io/travis/onmyway133/SwiftHash.svg?style=flat)](https://travis-ci.org/onmyway133/SwiftHash)
 [![Version](https://img.shields.io/cocoapods/v/SwiftHash.svg?style=flat)](http://cocoadocs.org/docsets/SwiftHash)
@@ -6,14 +7,13 @@
 [![License](https://img.shields.io/cocoapods/l/SwiftHash.svg?style=flat)](http://cocoadocs.org/docsets/SwiftHash)
 [![Platform](https://img.shields.io/cocoapods/p/SwiftHash.svg?style=flat)](http://cocoadocs.org/docsets/SwiftHash)
 
-## Description
+![](Screenshots/Banner.png)
 
-**SwiftHash** description.
-
-## Usage
+## MD5
 
 ```swift
-<API>
+MD5("https://www.google.com // 8FFDEFBDEC956B595D257F0AAEEFD623
+MD5("https://unsplash.it/600/300/?image=1 // D59E956EBB1BE415970F04EC77F4C875
 ```
 
 ## Installation
@@ -35,6 +35,10 @@ github "onmyway133/SwiftHash"
 ## Author
 
 Khoa Pham, onmyway133@gmail.com
+
+## Credit
+
+- MD5 based on http://pajhome.org.uk/crypt/md5/md5.html
 
 ## Contributing
 

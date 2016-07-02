@@ -1,3 +1,20 @@
+/*
+ * A JavaScript implementation of the RSA Data Security, Inc. MD5 Message
+ * Digest Algorithm, as defined in RFC 1321.
+ * Version 2.2 Copyright (C) Paul Johnston 1999 - 2009
+ * Other contributors: Greg Holt, Andrew Kepert, Ydnar, Lostinet
+ * Distributed under the BSD License
+ * See http://pajhome.org.uk/crypt/md5 for more info.
+ */
+
+//
+//  MD5.swift
+//  SwiftHash 
+//
+//  Created by Khoa Pham
+//  Copyright © 2016 Fantageek. All rights reserved.
+//
+
 import Foundation
 
 public func hex_md5(input: String) -> String {

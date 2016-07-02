@@ -60,7 +60,8 @@ func binl2rstr(input: [Int32]) -> [CUnsignedChar] {
   var output: [CUnsignedChar] = []
 
   for i in 0.stride(to: input.count * 32, by: 8) {
-    let value: Int32 = Int32((input[i>>5] >> Int32(i % 32)) & 0xFF)
+    // [i>>5] >>>
+    let value: Int32 = zeroFillRightShift(input[i>>5], Int32(i % 32)) & 0xFF
     output.append(CUnsignedChar(value))
   }
 
@@ -88,7 +89,8 @@ func safe_add(x: Int32, _ y: Int32) -> Int32 {
  * Bitwise rotate a 32-bit number to the left.
  */
 func bit_rol(num: Int32, _ cnt: Int32) -> Int32 {
-  return (num << cnt) | (num >> (32 - cnt))
+  // num >>>
+  return (num << cnt) | zeroFillRightShift(num, (32 - cnt))
 }
 
 
@@ -130,6 +132,7 @@ func binl_md5(input: [Int32], _ len: Int) -> [Int32] {
   let value: Int32 = 0x80 << Int32((len) % 32)
   x[len >> 5] = (x[len >> 5] ?? 0) | value
 
+  // >>> 9
   let index = (((len + 64) >> 9) << 4) + 14
   x[index] = (x[index] ?? 0) | Int32(len)
 
@@ -224,4 +227,9 @@ func binl_md5(input: [Int32], _ len: Int) -> [Int32] {
 // MARK: - Helper
 func length(dictionary: [Int: Int32]) -> Int {
   return (dictionary.keys.maxElement() ?? 0) + 1
+}
+
+func zeroFillRightShift(num: Int32, _ count: Int32) -> Int32 {
+  let value = UInt32(bitPattern: num) >> UInt32(bitPattern: count)
+  return Int32(bitPattern: value)
 }

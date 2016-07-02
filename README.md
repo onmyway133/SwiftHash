@@ -12,7 +12,7 @@ Hash in Swift
 ## MD5
 
 ```swift
-MD5("https://www.google.com // 8FFDEFBDEC956B595D257F0AAEEFD623
+MD5("https://www.google.com") // 8FFDEFBDEC956B595D257F0AAEEFD623
 MD5("https://unsplash.it/600/300/?image=1") // D59E956EBB1BE415970F04EC77F4C875
 ```
 

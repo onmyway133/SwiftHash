@@ -38,15 +38,15 @@ class Tests: XCTestCase {
   }
 
   func testMD5() {
-    XCTAssertEqual(hex_md5("hello"),
+    XCTAssertEqual(MD5("hello"),
                    "5D41402ABC4B2A76B9719D911017C592")
-    XCTAssertEqual(hex_md5("world"),
+    XCTAssertEqual(MD5("world"),
                    "7D793037A0760186574B0282F2F435E7")
-    XCTAssertEqual(hex_md5("https://www.google.com"),
+    XCTAssertEqual(MD5("https://www.google.com"),
                    "8FFDEFBDEC956B595D257F0AAEEFD623")
-    XCTAssertEqual(hex_md5("https://www.google.com/logos/doodles/2016/parents-day-in-korea-5757703554072576-hp2x.jpg"),
+    XCTAssertEqual(MD5("https://www.google.com/logos/doodles/2016/parents-day-in-korea-5757703554072576-hp2x.jpg"),
                    "0DFB10E8D2AE771B3B3ED4544139644E")
-    XCTAssertEqual(hex_md5("https://unsplash.it/600/300/?image=1"),
+    XCTAssertEqual(MD5("https://unsplash.it/600/300/?image=1"),
                    "D59E956EBB1BE415970F04EC77F4C875")
   }
 }

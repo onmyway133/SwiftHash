@@ -17,7 +17,15 @@
 
 import Foundation
 
-public func hex_md5(input: String) -> String {
+// MARK: - Public
+
+func MD5(input: String) -> String {
+  return hex_md5(input)
+}
+
+// MARK: - Functions
+
+func hex_md5(input: String) -> String {
   return rstr2hex(rstr_md5(str2rstr_utf8(input)))
 }
 

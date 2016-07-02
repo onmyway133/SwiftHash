@@ -49,4 +49,10 @@ class Tests: XCTestCase {
     XCTAssertEqual(MD5("https://unsplash.it/600/300/?image=1"),
                    "D59E956EBB1BE415970F04EC77F4C875")
   }
+
+  func testMD5_Data() {
+    let data = "https://www.google.com".dataUsingEncoding(NSUTF8StringEncoding)
+    XCTAssertEqual(MD5(String(data: data!, encoding: NSUTF8StringEncoding)!),
+                   "8FFDEFBDEC956B595D257F0AAEEFD623")
+  }
 }

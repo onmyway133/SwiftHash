@@ -58,6 +58,10 @@ class Tests: XCTestCase {
                    "781E5E245D69B566979B86E28D23F2C7")
     XCTAssertEqual(MD5("0"),
                    "CFCD208495D565EF66E7DFF9F98764DA")
+    XCTAssertEqual(MD5("https://twitter.com/_HairForceOne/status/745235759460810752"),
+                   "40C2BFA3D7BFC7A453013ECD54022255")
+    XCTAssertEqual(MD5("Det er et velkjent faktum at lesere distraheres av lesbart innhold på en side når man ser på dens layout. Poenget med å bruke Lorem Ipsum er at det har en mer eller mindre normal fordeling av bokstaver i ord, i motsetning til 'Innhold her, innhold her', og gir inntrykk av å være lesbar tekst. Mange webside- og sideombrekkingsprogrammer bruker nå Lorem Ipsum som sin standard for provisorisk tekst"),
+                   "6B2880BCC7554CF07E72DB9C99BF3284")
   }
 
   func testMD5_Data() {

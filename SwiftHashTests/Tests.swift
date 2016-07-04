@@ -62,6 +62,16 @@ class Tests: XCTestCase {
                    "40C2BFA3D7BFC7A453013ECD54022255")
     XCTAssertEqual(MD5("Det er et velkjent faktum at lesere distraheres av lesbart innhold på en side når man ser på dens layout. Poenget med å bruke Lorem Ipsum er at det har en mer eller mindre normal fordeling av bokstaver i ord, i motsetning til 'Innhold her, innhold her', og gir inntrykk av å være lesbar tekst. Mange webside- og sideombrekkingsprogrammer bruker nå Lorem Ipsum som sin standard for provisorisk tekst"),
                    "6B2880BCC7554CF07E72DB9C99BF3284")
+    XCTAssertEqual(MD5("\\"),
+                   "28D397E87306B8631F3ED80D858D35F0")
+    XCTAssertEqual(MD5("http://res.cloudinary.com/demo/image/upload/w_300,h_200,c_crop/sample.jpg"),
+                   "6E30D9CC4C08BE4EEA49076328D4C1F0")
+    XCTAssertEqual(MD5("http://res.cloudinary.com/demo/image/upload/x_355,y_410,w_300,h_200,c_crop/brown_sheep.jpg"),
+                   "019E9D72B5AF84EF114868875C1597ED")
+    XCTAssertEqual(MD5("http://www.w3schools.com/tags/html_form_submit.asp?text=Hello+G%C3%BCnter"),
+                   "C89A2146CD3DF34ECDA86B6E0709B3FD")
+    XCTAssertEqual(MD5("!%40%23%24%25%5E%26*()%2C.%3C%3E%5C'1234567890-%3D"),
+                   "09A1790760693160E74B9D6FCEC7EF64")
   }
 
   func testMD5_Data() {

@@ -48,6 +48,16 @@ class Tests: XCTestCase {
                    "0DFB10E8D2AE771B3B3ED4544139644E")
     XCTAssertEqual(MD5("https://unsplash.it/600/300/?image=1"),
                    "D59E956EBB1BE415970F04EC77F4C875")
+    XCTAssertEqual(MD5(""),
+                   "D41D8CD98F00B204E9800998ECF8427E")
+    XCTAssertEqual(MD5("ABCDEFGHIJKLMNOPQRSTWXYZ1234567890"),
+                   "B8F4F38629EC4F4A23F5DCC6086F8035")
+    XCTAssertEqual(MD5("abcdefghijklmnopqrstwxyz1234567890"),
+                   "B2E875F4D53CCF6CEFB5CDA3F86FC542")
+    XCTAssertEqual(MD5("0123456789"),
+                   "781E5E245D69B566979B86E28D23F2C7")
+    XCTAssertEqual(MD5("0"),
+                   "CFCD208495D565EF66E7DFF9F98764DA")
   }
 
   func testMD5_Data() {

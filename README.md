@@ -18,6 +18,7 @@ MD5("https://unsplash.it/600/300/?image=1") // D59E956EBB1BE415970F04EC77F4C875
 
 ## Installation
 
+#### CocoaPods
 **SwiftHash** is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
@@ -25,12 +26,17 @@ it, simply add the following line to your Podfile:
 pod 'SwiftHash'
 ```
 
+#### Carthage
 **SwiftHash** is also available through [Carthage](https://github.com/Carthage/Carthage).
 To install just write into your Cartfile:
 
 ```ruby
 github "onmyway133/SwiftHash"
 ```
+
+#### Manually
+1. Download and drop ```/Sources``` folder in your project.  
+2. Congratulations!  
 
 ## Author
 

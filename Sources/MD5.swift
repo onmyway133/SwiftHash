@@ -19,25 +19,25 @@ import Foundation
 
 // MARK: - Public
 
-public func MD5(input: String) -> String {
+public func MD5(_ input: String) -> String {
   return hex_md5(input)
 }
 
 // MARK: - Functions
 
-func hex_md5(input: String) -> String {
+func hex_md5(_ input: String) -> String {
   return rstr2hex(rstr_md5(str2rstr_utf8(input)))
 }
 
-func str2rstr_utf8(input: String) -> [CUnsignedChar] {
+func str2rstr_utf8(_ input: String) -> [CUnsignedChar] {
   return Array(input.utf8)
 }
 
-func rstr2tr(input: [CUnsignedChar]) -> String {
+func rstr2tr(_ input: [CUnsignedChar]) -> String {
   var output: String = ""
 
   input.forEach {
-    output.append(UnicodeScalar($0))
+    output.append(String(UnicodeScalar($0)))
   }
 
   return output
@@ -46,7 +46,7 @@ func rstr2tr(input: [CUnsignedChar]) -> String {
 /*
  * Convert a raw string to a hex string
  */
-func rstr2hex(input: [CUnsignedChar]) -> String {
+func rstr2hex(_ input: [CUnsignedChar]) -> String {
   let hexTab: [Character] = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F"]
   var output: [Character] = []
 
@@ -66,10 +66,10 @@ func rstr2hex(input: [CUnsignedChar]) -> String {
  * Convert a raw string to an array of little-endian words
  * Characters >255 have their high-byte silently ignored.
  */
-func rstr2binl(input: [CUnsignedChar]) -> [Int32] {
+func rstr2binl(_ input: [CUnsignedChar]) -> [Int32] {
   var output: [Int: Int32] = [:]
 
-  for i in 0.stride(to: input.count * 8, by: 8) {
+  for i in stride(from: 0, to: input.count * 8, by: 8) {
     let value: Int32 = (Int32(input[i/8]) & 0xFF) << (Int32(i) % 32)
 
     output[i >> 5] = unwrap(output[i >> 5]) | value
@@ -81,10 +81,10 @@ func rstr2binl(input: [CUnsignedChar]) -> [Int32] {
 /*
  * Convert an array of little-endian words to a string
  */
-func binl2rstr(input: [Int32]) -> [CUnsignedChar] {
+func binl2rstr(_ input: [Int32]) -> [CUnsignedChar] {
   var output: [CUnsignedChar] = []
 
-  for i in 0.stride(to: input.count * 32, by: 8) {
+  for i in stride(from: 0, to: input.count * 32, by: 8) {
     // [i>>5] >>>
     let value: Int32 = zeroFillRightShift(input[i>>5], Int32(i % 32)) & 0xFF
     output.append(CUnsignedChar(value))
@@ -96,7 +96,7 @@ func binl2rstr(input: [Int32]) -> [CUnsignedChar] {
 /*
  * Calculate the MD5 of a raw string
  */
-func rstr_md5(input: [CUnsignedChar]) -> [CUnsignedChar] {
+func rstr_md5(_ input: [CUnsignedChar]) -> [CUnsignedChar] {
   return binl2rstr(binl_md5(rstr2binl(input), input.count * 8))
 }
 
@@ -104,7 +104,7 @@ func rstr_md5(input: [CUnsignedChar]) -> [CUnsignedChar] {
  * Add integers, wrapping at 2^32. This uses 16-bit operations internally
  * to work around bugs in some JS interpreters.
  */
-func safe_add(x: Int32, _ y: Int32) -> Int32 {
+func safe_add(_ x: Int32, _ y: Int32) -> Int32 {
   let lsw = (x & 0xFFFF) + (y & 0xFFFF)
   let msw = (x >> 16) + (y >> 16) + (lsw >> 16)
   return (msw << 16) | (lsw & 0xFFFF)
@@ -113,7 +113,7 @@ func safe_add(x: Int32, _ y: Int32) -> Int32 {
 /*
  * Bitwise rotate a 32-bit number to the left.
  */
-func bit_rol(num: Int32, _ cnt: Int32) -> Int32 {
+func bit_rol(_ num: Int32, _ cnt: Int32) -> Int32 {
   // num >>>
   return (num << cnt) | zeroFillRightShift(num, (32 - cnt))
 }
@@ -122,23 +122,23 @@ func bit_rol(num: Int32, _ cnt: Int32) -> Int32 {
 /*
  * These funcs implement the four basic operations the algorithm uses.
  */
-func md5_cmn(q: Int32, _ a: Int32, _ b: Int32, _ x: Int32, _ s: Int32, _ t: Int32) -> Int32 {
+func md5_cmn(_ q: Int32, _ a: Int32, _ b: Int32, _ x: Int32, _ s: Int32, _ t: Int32) -> Int32 {
   return safe_add(bit_rol(safe_add(safe_add(a, q), safe_add(x, t)), s), b)
 }
 
-func md5_ff(a: Int32, _ b: Int32, _ c: Int32, _ d: Int32, _ x: Int32, _ s: Int32, _ t: Int32) -> Int32 {
+func md5_ff(_ a: Int32, _ b: Int32, _ c: Int32, _ d: Int32, _ x: Int32, _ s: Int32, _ t: Int32) -> Int32 {
   return md5_cmn((b & c) | ((~b) & d), a, b, x, s, t)
 }
 
-func md5_gg(a: Int32, _ b: Int32, _ c: Int32, _ d: Int32, _ x: Int32, _ s: Int32, _ t: Int32) -> Int32 {
+func md5_gg(_ a: Int32, _ b: Int32, _ c: Int32, _ d: Int32, _ x: Int32, _ s: Int32, _ t: Int32) -> Int32 {
   return md5_cmn((b & d) | (c & (~d)), a, b, x, s, t)
 }
 
-func md5_hh(a: Int32, _ b: Int32, _ c: Int32, _ d: Int32, _ x: Int32, _ s: Int32, _ t: Int32) -> Int32 {
+func md5_hh(_ a: Int32, _ b: Int32, _ c: Int32, _ d: Int32, _ x: Int32, _ s: Int32, _ t: Int32) -> Int32 {
   return md5_cmn(b ^ c ^ d, a, b, x, s, t)
 }
 
-func md5_ii(a: Int32, _ b: Int32, _ c: Int32, _ d: Int32, _ x: Int32, _ s: Int32, _ t: Int32) -> Int32 {
+func md5_ii(_ a: Int32, _ b: Int32, _ c: Int32, _ d: Int32, _ x: Int32, _ s: Int32, _ t: Int32) -> Int32 {
   return md5_cmn(c ^ (b | (~d)), a, b, x, s, t)
 }
 
@@ -146,11 +146,11 @@ func md5_ii(a: Int32, _ b: Int32, _ c: Int32, _ d: Int32, _ x: Int32, _ s: Int32
 /*
  * Calculate the MD5 of an array of little-endian words, and a bit length.
  */
-func binl_md5(input: [Int32], _ len: Int) -> [Int32] {
+func binl_md5(_ input: [Int32], _ len: Int) -> [Int32] {
   /* append padding */
 
   var x: [Int: Int32] = [:]
-  for (index, value) in input.enumerate() {
+  for (index, value) in input.enumerated() {
     x[index] = value
   }
 
@@ -166,7 +166,7 @@ func binl_md5(input: [Int32], _ len: Int) -> [Int32] {
   var c: Int32 = -1732584194
   var d: Int32 =  271733878
 
-  for i in 0.stride(to: length(x), by: 16) {
+  for i in stride(from: 0, to: length(x), by: 16) {
     let olda: Int32 = a
     let oldb: Int32 = b
     let oldc: Int32 = c
@@ -251,21 +251,21 @@ func binl_md5(input: [Int32], _ len: Int) -> [Int32] {
 
 // MARK: - Helper
 
-func length(dictionary: [Int: Int32]) -> Int {
-  return (dictionary.keys.maxElement() ?? 0) + 1
+func length(_ dictionary: [Int: Int32]) -> Int {
+  return (dictionary.keys.max() ?? 0) + 1
 }
 
-func dictionary2array(dictionary: [Int: Int32]) -> [Int32] {
-  var array = Array<Int32>(count: dictionary.keys.count, repeatedValue: 0)
+func dictionary2array(_ dictionary: [Int: Int32]) -> [Int32] {
+  var array = Array<Int32>(repeating: 0, count: dictionary.keys.count)
 
-  for i in Array(dictionary.keys).sort() {
+  for i in Array(dictionary.keys).sorted() {
     array[i] = unwrap(dictionary[i])
   }
 
   return array
 }
 
-func unwrap(value: Int32?, _ fallback: Int32 = 0) -> Int32 {
+func unwrap(_ value: Int32?, _ fallback: Int32 = 0) -> Int32 {
   if let value = value {
     return value
   }
@@ -273,7 +273,7 @@ func unwrap(value: Int32?, _ fallback: Int32 = 0) -> Int32 {
   return fallback
 }
 
-func zeroFillRightShift(num: Int32, _ count: Int32) -> Int32 {
+func zeroFillRightShift(_ num: Int32, _ count: Int32) -> Int32 {
   let value = UInt32(bitPattern: num) >> UInt32(bitPattern: count)
   return Int32(bitPattern: value)
 }

@@ -10,6 +10,6 @@ import Foundation
 
 // MARK: - Public
 
-func SHA1(input: String) -> String {
+func SHA1(_ input: String) -> String {
   return input
 }

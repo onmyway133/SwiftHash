@@ -75,8 +75,8 @@ class Tests: XCTestCase {
   }
 
   func testMD5_Data() {
-    let data = "https://www.google.com".dataUsingEncoding(NSUTF8StringEncoding)
-    XCTAssertEqual(MD5(String(data: data!, encoding: NSUTF8StringEncoding)!),
+    let data = "https://www.google.com".data(using: String.Encoding.utf8)
+    XCTAssertEqual(MD5(String(data: data!, encoding: String.Encoding.utf8)!),
                    "8FFDEFBDEC956B595D257F0AAEEFD623")
   }
 }

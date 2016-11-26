@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name             = "SwiftHash"
   s.summary          = "Hash in Swift"
-  s.version          = "0.1.0"
+  s.version          = "1.0.0"
   s.homepage         = "https://github.com/onmyway133/SwiftHash"
   s.license          = 'MIT'
   s.author           = { "Khoa Pham" => "onmyway133@gmail.com" }

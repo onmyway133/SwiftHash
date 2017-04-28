@@ -13,6 +13,8 @@
 		D215F01C1D27A97B00575970 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D215F01A1D27A97B00575970 /* Tests.swift */; };
 		D215F01E1D27CCE800575970 /* SHA1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D215F01D1D27CCE800575970 /* SHA1.swift */; };
 		D215F01F1D27CCE800575970 /* SHA1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D215F01D1D27CCE800575970 /* SHA1.swift */; };
+		D2B260D21EB35CD800F56C26 /* naughty_strings.txt in Resources */ = {isa = PBXBuildFile; fileRef = D2B260D11EB35CD800F56C26 /* naughty_strings.txt */; };
+		D2B260D31EB35CD800F56C26 /* naughty_strings.txt in Resources */ = {isa = PBXBuildFile; fileRef = D2B260D11EB35CD800F56C26 /* naughty_strings.txt */; };
 		D5B2E8AA1C3A780C00C0327D /* SwiftHash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B2E89F1C3A780C00C0327D /* SwiftHash.framework */; };
 		D5C6294A1C3A7FAA007F7B7C /* SwiftHash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C629401C3A7FAA007F7B7C /* SwiftHash.framework */; };
 /* End PBXBuildFile section */
@@ -38,6 +40,7 @@
 		D215F0171D27A96200575970 /* MD5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MD5.swift; sourceTree = "<group>"; };
 		D215F01A1D27A97B00575970 /* Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		D215F01D1D27CCE800575970 /* SHA1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHA1.swift; sourceTree = "<group>"; };
+		D2B260D11EB35CD800F56C26 /* naughty_strings.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = naughty_strings.txt; sourceTree = "<group>"; };
 		D500FD111C3AABED00782D78 /* Playground-iOS.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Playground-iOS.playground"; sourceTree = "<group>"; };
 		D500FD121C3AAC8E00782D78 /* Playground-Mac.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Playground-Mac.playground"; sourceTree = "<group>"; };
 		D5B2E89F1C3A780C00C0327D /* SwiftHash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftHash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,6 +87,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D2B260D01EB35CD800F56C26 /* Fixture */ = {
+			isa = PBXGroup;
+			children = (
+				D2B260D11EB35CD800F56C26 /* naughty_strings.txt */,
+			);
+			path = Fixture;
+			sourceTree = "<group>";
+		};
 		D5B2E8951C3A780C00C0327D = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +139,7 @@
 		D5C6298F1C3A8BDA007F7B7C /* SwiftHashTests */ = {
 			isa = PBXGroup;
 			children = (
+				D2B260D01EB35CD800F56C26 /* Fixture */,
 				D5C629901C3A8BDA007F7B7C /* Info-iOS.plist */,
 				D5C629911C3A8BDA007F7B7C /* Info-Mac.plist */,
 				D215F01A1D27A97B00575970 /* Tests.swift */,
@@ -285,6 +297,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2B260D21EB35CD800F56C26 /* naughty_strings.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +312,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2B260D31EB35CD800F56C26 /* naughty_strings.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

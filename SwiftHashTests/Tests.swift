@@ -79,4 +79,15 @@ class Tests: XCTestCase {
     XCTAssertEqual(MD5(String(data: data!, encoding: String.Encoding.utf8)!),
                    "8FFDEFBDEC956B595D257F0AAEEFD623")
   }
+
+  func testNaughtyStrings() {
+    let path = Bundle(for: Tests.self).path(forResource: "naughty_strings", ofType: "txt")!
+    let content = try! String(contentsOfFile: path, encoding: .utf8)
+    let lines = content.components(separatedBy: .newlines)
+
+    lines.forEach { line in
+      let md5 = MD5(line)
+      XCTAssertEqual(md5.characters.count, 32)
+    }
+  }
 }

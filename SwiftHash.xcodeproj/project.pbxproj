@@ -15,11 +15,20 @@
 		D215F01F1D27CCE800575970 /* SHA1.swift in Sources */ = {isa = PBXBuildFile; fileRef = D215F01D1D27CCE800575970 /* SHA1.swift */; };
 		D2B260D21EB35CD800F56C26 /* naughty_strings.txt in Resources */ = {isa = PBXBuildFile; fileRef = D2B260D11EB35CD800F56C26 /* naughty_strings.txt */; };
 		D2B260D31EB35CD800F56C26 /* naughty_strings.txt in Resources */ = {isa = PBXBuildFile; fileRef = D2B260D11EB35CD800F56C26 /* naughty_strings.txt */; };
+		D2CF52F21EE15A33001B09FC /* SwiftHash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2CF52E91EE15A33001B09FC /* SwiftHash.framework */; };
+		D2CF53001EE15AA6001B09FC /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D215F01A1D27A97B00575970 /* Tests.swift */; };
 		D5B2E8AA1C3A780C00C0327D /* SwiftHash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B2E89F1C3A780C00C0327D /* SwiftHash.framework */; };
 		D5C6294A1C3A7FAA007F7B7C /* SwiftHash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5C629401C3A7FAA007F7B7C /* SwiftHash.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		D2CF52F31EE15A33001B09FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D5B2E8961C3A780C00C0327D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2CF52E81EE15A33001B09FC;
+			remoteInfo = "SwiftHash-tvOS";
+		};
 		D5B2E8AB1C3A780C00C0327D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D5B2E8961C3A780C00C0327D /* Project object */;
@@ -41,6 +50,10 @@
 		D215F01A1D27A97B00575970 /* Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		D215F01D1D27CCE800575970 /* SHA1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHA1.swift; sourceTree = "<group>"; };
 		D2B260D11EB35CD800F56C26 /* naughty_strings.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = naughty_strings.txt; sourceTree = "<group>"; };
+		D2CF52E91EE15A33001B09FC /* SwiftHash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftHash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2CF52F11EE15A33001B09FC /* SwiftHash-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwiftHash-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2CF53011EE15BCE001B09FC /* Info-tvOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
+		D2CF53031EE15BD6001B09FC /* Info-tvOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
 		D500FD111C3AABED00782D78 /* Playground-iOS.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Playground-iOS.playground"; sourceTree = "<group>"; };
 		D500FD121C3AAC8E00782D78 /* Playground-Mac.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Playground-Mac.playground"; sourceTree = "<group>"; };
 		D5B2E89F1C3A780C00C0327D /* SwiftHash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftHash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,6 +67,21 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D2CF52E51EE15A33001B09FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2CF52EE1EE15A33001B09FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2CF52F21EE15A33001B09FC /* SwiftHash.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D5B2E89B1C3A780C00C0327D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -114,6 +142,8 @@
 				D5B2E8A91C3A780C00C0327D /* SwiftHash-iOS-Tests.xctest */,
 				D5C629401C3A7FAA007F7B7C /* SwiftHash.framework */,
 				D5C629491C3A7FAA007F7B7C /* SwiftHash-Mac-Tests.xctest */,
+				D2CF52E91EE15A33001B09FC /* SwiftHash.framework */,
+				D2CF52F11EE15A33001B09FC /* SwiftHash-tvOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -121,6 +151,7 @@
 		D5C6295C1C3A800E007F7B7C /* SwiftHash */ = {
 			isa = PBXGroup;
 			children = (
+				D2CF53031EE15BD6001B09FC /* Info-tvOS.plist */,
 				D5C6298B1C3A8BBD007F7B7C /* Info-iOS.plist */,
 				D5C6298C1C3A8BBD007F7B7C /* Info-Mac.plist */,
 			);
@@ -139,6 +170,7 @@
 		D5C6298F1C3A8BDA007F7B7C /* SwiftHashTests */ = {
 			isa = PBXGroup;
 			children = (
+				D2CF53011EE15BCE001B09FC /* Info-tvOS.plist */,
 				D2B260D01EB35CD800F56C26 /* Fixture */,
 				D5C629901C3A8BDA007F7B7C /* Info-iOS.plist */,
 				D5C629911C3A8BDA007F7B7C /* Info-Mac.plist */,
@@ -150,6 +182,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		D2CF52E61EE15A33001B09FC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D5B2E89C1C3A780C00C0327D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -167,6 +206,42 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		D2CF52E81EE15A33001B09FC /* SwiftHash-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2CF52FA1EE15A33001B09FC /* Build configuration list for PBXNativeTarget "SwiftHash-tvOS" */;
+			buildPhases = (
+				D2CF52E41EE15A33001B09FC /* Sources */,
+				D2CF52E51EE15A33001B09FC /* Frameworks */,
+				D2CF52E61EE15A33001B09FC /* Headers */,
+				D2CF52E71EE15A33001B09FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SwiftHash-tvOS";
+			productName = "SwiftHash-tvOS";
+			productReference = D2CF52E91EE15A33001B09FC /* SwiftHash.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D2CF52F01EE15A33001B09FC /* SwiftHash-tvOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2CF52FD1EE15A33001B09FC /* Build configuration list for PBXNativeTarget "SwiftHash-tvOSTests" */;
+			buildPhases = (
+				D2CF52ED1EE15A33001B09FC /* Sources */,
+				D2CF52EE1EE15A33001B09FC /* Frameworks */,
+				D2CF52EF1EE15A33001B09FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D2CF52F41EE15A33001B09FC /* PBXTargetDependency */,
+			);
+			name = "SwiftHash-tvOSTests";
+			productName = "SwiftHash-tvOSTests";
+			productReference = D2CF52F11EE15A33001B09FC /* SwiftHash-tvOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		D5B2E89E1C3A780C00C0327D /* SwiftHash-iOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D5B2E8B31C3A780C00C0327D /* Build configuration list for PBXNativeTarget "SwiftHash-iOS" */;
@@ -245,10 +320,18 @@
 		D5B2E8961C3A780C00C0327D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0730;
+				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = Fantageek;
 				TargetAttributes = {
+					D2CF52E81EE15A33001B09FC = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+					};
+					D2CF52F01EE15A33001B09FC = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+					};
 					D5B2E89E1C3A780C00C0327D = {
 						CreatedOnToolsVersion = 7.2;
 						LastSwiftMigration = 0810;
@@ -281,11 +364,27 @@
 				D5C6293F1C3A7FAA007F7B7C /* SwiftHash-Mac */,
 				D5B2E8A81C3A780C00C0327D /* SwiftHash-iOS-Tests */,
 				D5C629481C3A7FAA007F7B7C /* SwiftHash-Mac-Tests */,
+				D2CF52E81EE15A33001B09FC /* SwiftHash-tvOS */,
+				D2CF52F01EE15A33001B09FC /* SwiftHash-tvOSTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		D2CF52E71EE15A33001B09FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2CF52EF1EE15A33001B09FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D5B2E89D1C3A780C00C0327D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -319,6 +418,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D2CF52E41EE15A33001B09FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2CF52ED1EE15A33001B09FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2CF53001EE15AA6001B09FC /* Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D5B2E89A1C3A780C00C0327D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -356,6 +470,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		D2CF52F41EE15A33001B09FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D2CF52E81EE15A33001B09FC /* SwiftHash-tvOS */;
+			targetProxy = D2CF52F31EE15A33001B09FC /* PBXContainerItemProxy */;
+		};
 		D5B2E8AC1C3A780C00C0327D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D5B2E89E1C3A780C00C0327D /* SwiftHash-iOS */;
@@ -369,6 +488,98 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		D2CF52FB1EE15A33001B09FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "SwiftHash/Info-tvOS.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fantageek.SwiftHash-tvOS";
+				PRODUCT_NAME = SwiftHash;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.2;
+			};
+			name = Debug;
+		};
+		D2CF52FC1EE15A33001B09FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "SwiftHash/Info-tvOS.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fantageek.SwiftHash-tvOS";
+				PRODUCT_NAME = SwiftHash;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 10.2;
+			};
+			name = Release;
+		};
+		D2CF52FE1EE15A33001B09FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				INFOPLIST_FILE = "SwiftHashTests/Info-tvOS.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fantageek.SwiftHash-tvOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+				TVOS_DEPLOYMENT_TARGET = 10.2;
+			};
+			name = Debug;
+		};
+		D2CF52FF1EE15A33001B09FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				INFOPLIST_FILE = "SwiftHashTests/Info-tvOS.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fantageek.SwiftHash-tvOSTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TVOS_DEPLOYMENT_TARGET = 10.2;
+			};
+			name = Release;
+		};
 		D5B2E8B11C3A780C00C0327D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -411,6 +622,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -451,6 +663,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -474,7 +687,6 @@
 				PRODUCT_NAME = SwiftHash;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -493,7 +705,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fantageek.SwiftHash.SwiftHash-iOS";
 				PRODUCT_NAME = SwiftHash;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -617,6 +828,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D2CF52FA1EE15A33001B09FC /* Build configuration list for PBXNativeTarget "SwiftHash-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2CF52FB1EE15A33001B09FC /* Debug */,
+				D2CF52FC1EE15A33001B09FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D2CF52FD1EE15A33001B09FC /* Build configuration list for PBXNativeTarget "SwiftHash-tvOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2CF52FE1EE15A33001B09FC /* Debug */,
+				D2CF52FF1EE15A33001B09FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		D5B2E8991C3A780C00C0327D /* Build configuration list for PBXProject "SwiftHash" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

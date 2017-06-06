@@ -7,13 +7,11 @@
  * See http://pajhome.org.uk/crypt/md5 for more info.
  */
 
-//
-//  MD5.swift
-//  SwiftHash 
-//
-//  Created by Khoa Pham
-//  Copyright © 2016 Fantageek. All rights reserved.
-//
+/**
+ *  SwiftHash
+ *  Copyright (c) Khoa Pham 2017
+ *  Licensed under the MIT license. See LICENSE file.
+ */
 
 import Foundation
 

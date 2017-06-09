@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name             = "SwiftHash"
   s.summary          = "Hash in Swift"
-  s.version          = "1.4.0"
+  s.version          = "1.5.0"
   s.homepage         = "https://github.com/onmyway133/SwiftHash"
   s.license          = 'MIT'
   s.author           = { "Khoa Pham" => "onmyway133@gmail.com" }
@@ -18,4 +18,6 @@ Pod::Spec.new do |s|
 
   s.requires_arc = true
   s.source_files = 'Sources/**/*'
+
+  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.0' }
 end

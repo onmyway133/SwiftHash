@@ -24,7 +24,7 @@ MD5("https://unsplash.it/600/300/?image=1") // D59E956EBB1BE415970F04EC77F4C875
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'SwiftHash', git: 'https://github.com/onmyway133/SwiftHash'
+pod 'SwiftHash'
 ```
 
 #### Carthage

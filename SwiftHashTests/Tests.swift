@@ -87,7 +87,7 @@ class Tests: XCTestCase {
 
     lines.forEach { line in
       let md5 = MD5(line)
-      XCTAssertEqual(md5.characters.count, 32)
+      XCTAssertEqual(md5.count, 32)
     }
   }
 }

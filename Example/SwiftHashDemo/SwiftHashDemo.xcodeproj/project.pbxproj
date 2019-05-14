@@ -122,10 +122,9 @@
 			};
 			buildConfigurationList = D5C7F73B1C3BC9CE008CDDBA /* Build configuration list for PBXProject "SwiftHashDemo" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 				Base,
 			);

@@ -392,11 +392,11 @@
 			};
 			buildConfigurationList = D5B2E8991C3A780C00C0327D /* Build configuration list for PBXProject "SwiftHash" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
+				Base,
 			);
 			mainGroup = D5B2E8951C3A780C00C0327D;
 			productRefGroup = D5B2E8A01C3A780C00C0327D /* Products */;

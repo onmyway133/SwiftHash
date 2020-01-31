@@ -39,6 +39,11 @@ github "onmyway133/SwiftHash"
 1. Download and drop ```/Sources``` folder in your project.  
 2. Congratulations!  
 
+#### Import on your swift file
+```
+import SwiftHash 
+```
+
 ## Author
 
 Khoa Pham, onmyway133@gmail.com
